@@ -1,0 +1,112 @@
+/* ===================== */
+/* CÀI ĐẶT CHUNG CHO TRANG */
+/* ===================== */
+body {
+    font-family: Arial, sans-serif; /* Chọn font chữ hiển thị */
+    margin: 0;                     /* Xóa khoảng trắng viền ngoài trang */
+    padding: 20px;                 /* Thêm khoảng cách bên trong */
+  }
+  
+  /* ===================== */
+  /* MENU LỌC SẢN PHẨM */
+  /* ===================== */
+  .filter-menu {
+    display: flex;                 /* Hiển thị các mục lọc theo hàng ngang */
+    gap: 50px;                     /* Khoảng cách giữa các mục lọc */
+    border-bottom: 3px solid #050000; /* Đường gạch chân đen dưới menu */
+    padding-bottom: 1px;           /* Khoảng cách giữa nội dung và viền dưới */
+    margin-bottom: 30px;           /* Tạo khoảng cách với phần sản phẩm */
+  }
+  
+  .filter-item {
+    position: relative;            /* Định vị cho dropdown con hiển thị theo cha */
+  }
+  
+  .filter-label {
+    font-weight: bold;             /* In đậm chữ menu */
+    cursor: pointer;               /* Biểu tượng bàn tay khi rê chuột */
+    padding: 6px 12px;             /* Tăng vùng click và khoảng trắng */
+  }
+  
+  /* ===================== */
+  /* DROPDOWN MENU */
+  /* ===================== */
+  .filter-dropdown {
+    display: none;                 /* Ẩn dropdown khi chưa click */
+    position: absolute;           /* Dropdown hiển thị đè lên vị trí cha */
+    top: 120%;                    /* Cách label một khoảng để hiển thị bên dưới */
+    left: 0;
+    background-color: #fff;       /* Nền dropdown trắng */
+    min-width: 200px;             /* Độ rộng tối thiểu của dropdown */
+    border: 1px solid #ccc;       /* Viền xám nhạt */
+    border-radius: 4px;           /* Bo tròn góc */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* Đổ bóng nhẹ */
+    z-index: 10;                  /* Hiển thị lớp trên cùng */
+  }
+  
+  .dropdown-option {
+    padding: 10px 14px;           /* Khoảng cách trong từng mục */
+    cursor: pointer;              /* Biểu tượng tay khi rê chuột */
+  }
+  
+  .dropdown-option:hover {
+    background-color: #f2f2f2;    /* Hiệu ứng đổi màu khi hover */
+  }
+  
+  /* ===================== */
+  /* DANH SÁCH SẢN PHẨM */
+  /* ===================== */
+  .product-item img {
+    width: 50%;                 /* Hình ảnh chiếm toàn bộ chiều rộng khung */
+    height: auto;                /* Tự động tính chiều cao */
+    display: block;
+    margin: 0 auto;
+  }.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    padding: 0 10px;
+    max-width: 1200px; /* Giới hạn chiều rộng tổng để dễ kiểm soát */
+    margin: 0 auto; /* Canh giữa container */
+}
+
+.product-item {
+    width: calc(25% - 9px); /* 25% cho 4 ô, trừ đi khoảng cách gap (~12px/4) */
+    text-align: center;
+    position: relative;
+    box-sizing: border-box; /* Bao gồm padding/border trong chiều rộng */
+}
+
+  
+  /* ===================== */
+  /* THẺ "NEW ARRIVAL" */
+  /* ===================== */
+  .badge {
+    position: absolute;          /* Hiển thị đè lên hình ảnh */
+    top: 0;                      /* Căn phía trên */
+    left: 50%;                   /* Căn giữa theo chiều ngang */
+    transform: translateX(-50%); /* Căn giữa chính xác */
+    background-color: black;     /* Nền đen */
+    color: white;                /* Chữ trắng */
+    font-size: 12px;             /* Cỡ chữ nhỏ */
+    padding: 4px 8px;            /* Kích thước thẻ */
+    margin-bottom: 8px;          /* Khoảng cách dưới (dù không thấy rõ lắm ở đây) */
+  }
+  
+  /* ===================== */
+  /* TÊN & GIÁ SẢN PHẨM */
+  /* ===================== */
+  .product-name {
+    margin-top: 8px;             /* Cách hình ảnh một đoạn */
+    font-size: 14px;             /* Cỡ chữ tên sản phẩm */
+    white-space: nowrap;         /* Không xuống dòng */
+    overflow: hidden;            /* Ẩn phần dư nếu quá dài */
+    text-overflow: ellipsis;     /* Hiện dấu "..." nếu tên quá dài */
+  }
+  
+  .product-price {
+    font-weight: bold;           /* In đậm giá */
+    font-size: 15px;             /* Cỡ chữ giá */
+    margin-top: 4px;             /* Cách tên sản phẩm một đoạn */
+  }

@@ -1,0 +1,74 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #fff;
+}
+
+/* PHẦN MENU LỌC */
+.filter-section {
+  padding: 20px;
+  border-bottom: 1px solid #ccc;
+  background-color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.filter-menu {
+  display: flex;
+  gap: 30px;
+  justify-content: start;
+}
+
+.filter-item .filter-label {
+  font-weight: bold;
+  cursor: pointer;
+  padding: 6px 12px;
+}
+
+/* PHẦN DANH SÁCH SẢN PHẨM */
+.product-section {
+  padding: 30px 20px;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+}
+
+.product-item {
+  position: relative;
+  text-align: center;
+}
+
+.product-item img {
+  width: 100%;
+  height: auto;
+}
+
+.badge {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: black;
+  color: white;
+  font-size: 12px;
+  padding: 4px 8px;
+}
+
+.product-name {
+  margin-top: 8px;
+  font-size: 14px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.product-price {
+  font-weight: bold;
+  font-size: 15px;
+  margin-top: 4px;
+}

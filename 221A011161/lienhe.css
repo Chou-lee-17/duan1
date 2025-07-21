@@ -1,6 +1,3 @@
-/* ===================== */
-/* CÀI ĐẶT CHUNG CHO TRANG */
-/* ===================== */
 body {
     font-family: Arial, sans-serif; /* Chọn font chữ hiển thị */
     margin: 0;                     /* Xóa khoảng trắng viền ngoài trang */
@@ -57,10 +54,11 @@ body {
   /* DANH SÁCH SẢN PHẨM */
   /* ===================== */
   .product-item img {
-    width: 50%;                 /* Hình ảnh chiếm toàn bộ chiều rộng khung */
+    width: 80%;                 /* Hình ảnh chiếm toàn bộ chiều rộng khung */
     height: auto;                /* Tự động tính chiều cao */
     display: block;
     margin: 0 auto;
+
   }.product-grid {
     display: flex;
     flex-wrap: wrap;
